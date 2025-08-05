@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="ascending()">Ascending Order</button>
+        <button onclick="descending()">Descending Order</button>
+        <p id="product value"></p>
+        <script>
+            var numbers = [223, 985, 66, 4, 4626];
+            function myfunction(num) {
+                return num * 10;
+            }
+            var newarray = numbers.map(myfunction);
+            document.getElementById("product value").innerHTML = newarray;
+
+
+        function ascending() {
+                newarray.sort(function (a, b) { return (a - b) });
+                document.getElementById("product value").innerHTML = newarray;
+            }
+
+        function descending() {
+                newarray.sort(function (a, b) { return (b - a) });
+                document.getElementById("product value").innerHTML = newarray;
+            }
+
+        </script>
+
+    </body>
+</html>
