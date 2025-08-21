@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="changeBackgroundColor()">changeBackgroundColor</button>
+        <div></div>
+        <script>
+            function getRandomColor() {
+                var Letters = 'ABCDEFGHIJ';
+                let color='#';
+                for(let i=0;i<6;i++) {
+                color += Letters[Math.floor(Math.random() * 6)];
+            }
+            return color;
+        }
+        function changeBackgroundColor() {
+                document.body.style.backgroundColor = getRandomColor();
+        }
+        </script>
+    </body>
+</html>
