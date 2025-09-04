@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="number" onclick="stopstart()"></div>
+
+        <script>
+            var stopped = true;
+            var t;
+            var number;
+            var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+
+            function change() {
+                    var random = Math.floor(Math.random() * 10);
+                    number.innerHTML = numbers[random];
+            }
+
+            function stopstart() {
+                    if (stopped) {
+                        stopped = false;
+
+                        t = setInterval(change, 0.1);
+                    }
+                    else {
+                        clearInterval(t);
+                        stopped = true;
+                    }
+                }
+
+                window.onload = function () {
+                        number = document.getElementById('number');
+                        stopstart();
+                }
+        </script>
+    </body>
+</html>
