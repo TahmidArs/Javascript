@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Good Vibes Generator</title>
+
+        <style>
+
+            body {
+                font-family: sans-serif;
+                background: linear-gradient(to right,#ffecd2,#fcb69f);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                text-align: center;
+                background:white ;
+                padding: 40px;
+                border:15px;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            }
+
+            h1 {
+                margin-bottom: 20px;
+                color: #ff6f61;
+            }
+
+            #quote-box {
+                font-size: 1.4em;
+                color: black;
+                min-height: 80px;
+                margin-bottom: 30px;
+            }
+button {
+
+    padding: 10px 25px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e65b50;
+}
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Good Vibes Only</h1>
+            <div id="quote-box">
+                <p id="quote">Click the button to get inspired!</p>
+            </div>
+            <button onclick="generateQuote()">New Quote</button>
+        </div>
+
+        <script>
+            const quotes=[
+                "Believe in yourself and all that you are.",
+                "Every day is a second chance.",
+                "You are capable of amazing things.",
+                "Do something today that your future self will thank you for.",
+                "The best time for new beginnings is now.",
+            ];
+
+            function generateQuote() {
+                const randomIndex=Math.floor(Math.random()*quotes.length);
+                document.getElementById("quote").textContent=quotes[randomIndex];
+            }
+        </script>
+    </body>
+</html>
